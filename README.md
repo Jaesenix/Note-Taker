@@ -42,6 +42,9 @@ Application should allow users to view previously saved notes.
 
 Application should allow users to delete previously saved notes.
 
+![index](..assets/index.png)
+![notes](..assets/notes.png)
+
 ## Deploying the App
 
 You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Supplemental/HerokuGuide.md) for getting your app deployed on Heroku.
