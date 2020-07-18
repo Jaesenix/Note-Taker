@@ -18,11 +18,12 @@ module.exports = function (app) {
 
     app.post("/api/notes", function (req, res) {
         dbData.push(req.body);
-    res.json(true);    });
+        res.json(true);    
+});
 
-    fs.writeFileSync("../db.json", (savedNote));
-    console.log("Note saved!", Content = ", newNote");
-};
+//     fs.writeFileSync("../db.json", (savedNote));
+//     console.log("Note saved!", Content = ", newNote");
+// };
     // app.delete("/api/notes:id", function(req, res) {
     //     let id = parseInt(req.params.id);
     //     delete notesData[id - 1];
@@ -38,4 +39,4 @@ module.exports = function (app) {
     //             return true;
     //         })
     //     };
-    // });
+    };
