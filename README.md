@@ -42,8 +42,9 @@ Application should allow users to view previously saved notes.
 
 Application should allow users to delete previously saved notes.
 
-![index](.public/assets/index.png)
-![notes](.public/assets/notes.png)
+![index]/Users/js/Desktop/A11/Hw11/public/index.html
+
+![notes]/Users/js/Desktop/A11/Hw11/public/notes.html
 
 ## Deploying the App
 
