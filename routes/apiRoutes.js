@@ -2,8 +2,6 @@
 const path = require("path");
 const fs = require("fs");
 const dbData = require("../db.json");
-const savedNote = "";
-var app = express();
 
 
 module.exports = function (app) {
@@ -19,29 +17,25 @@ module.exports = function (app) {
     });
 
     app.post("/api/notes", function (req, res) {
-        const savedNote = (fs.readFileSync("../db.json", "utf8"));
-        const newNote = req.body;
-        const id = (savedNote.length);
-        newNote.id = id;
-        savedNote.push(newNote);
-    });
+        dbData.push(req.body);
+    res.json(true);    });
 
     fs.writeFileSync("../db.json", (savedNote));
     console.log("Note saved!", Content = ", newNote");
 };
-    app.delete("/api/notes:id", function(req, res) {
-        let id = parseInt(req.params.id);
-        delete notesData[id - 1];
-        res.json(notesData);
+    // app.delete("/api/notes:id", function(req, res) {
+    //     let id = parseInt(req.params.id);
+    //     delete notesData[id - 1];
+    //     res.json(notesData);
 
-        console.log("app.get");
+    //     console.log("app.get");
 
-        // store/write data 
-        function updatedDB() {
-            fs.writeFileSync(path.join(__dirname, "../db.json"),
-            err => {
-                if (err) throw err;
-                return true;
-            })
-        };
-    });
+    //     // store/write data 
+    //     function updatedDB() {
+    //         fs.writeFileSync(path.join(__dirname, "../db.json"),
+    //         err => {
+    //             if (err) throw err;
+    //             return true;
+    //         })
+    //     };
+    // });
